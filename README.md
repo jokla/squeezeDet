@@ -43,8 +43,9 @@ The following instructions are written for Linux-based distros.
     ```
     
 ### Using nvidia-docker
+- I tested on Ubuntu 16.04
 
-- Install Docker and nvidia-docker
+- Install [Docker](https://docs.docker.com/engine/installation/) and [nvidia-docker](https://github.com/NVIDIA/nvidia-docker/wiki/Installation)
 
 - Clone the SqueezeDet repository:
 
@@ -62,7 +63,7 @@ The following instructions are written for Linux-based distros.
     ```Shell
     pip install -r requirements.txt
     ```
-- Try the demo
+- Try the demo (follow next section)
     
 ## Demo:
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
