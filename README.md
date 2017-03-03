@@ -41,6 +41,29 @@ The following instructions are written for Linux-based distros.
     ```Shell
     pip install -r requirements.txt
     ```
+    
+### Using nvidia-docker
+
+- Install Docker and nvidia-docker
+
+- Clone the SqueezeDet repository:
+
+  ```Shell
+  git clone https://github.com/BichenWuUCB/squeezeDet.git
+  ```
+  Let's call the top level directory of SqueezeDet `$SQDT_ROOT`.
+
+- Start the nvidia-docker
+  ```Shell
+  nvidia-docker run --net=host -it --rm -v `pwd`:/notebooks gcr.io/tensorflow/tensorflow:latest-gpu bash
+  ```
+- Use pip to install required Python packages (inside the docker):
+    
+    ```Shell
+    pip install -r requirements.txt
+    ```
+- Try the demo
+    
 ## Demo:
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
 
